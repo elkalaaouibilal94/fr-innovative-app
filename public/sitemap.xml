@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main Pages -->
+  <url>
+    <loc>https://www.fr-innovative-haustechnik.de/</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fr-innovative-haustechnik.de/kontakt</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Project Pages -->
+  <url>
+    <loc>https://www.fr-innovative-haustechnik.de/projekte/komplettbad-sanierung</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fr-innovative-haustechnik.de/projekte/duschsanierung-1</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fr-innovative-haustechnik.de/projekte/duschsanierung-2</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fr-innovative-haustechnik.de/projekte/rohrsystem-installation</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fr-innovative-haustechnik.de/projekte/heizungsinstallation</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fr-innovative-haustechnik.de/projekte/badsanierungen-vorher-und-nachher</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    
+    <!-- Bilder für Badsanierungen Vorher und Nachher -->
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507057/Badsanierung_vorher_step_2___2_nrqa7d.jpg</image:loc>
+      <image:caption>Vorher – Rohbau des Badezimmers Schritt 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507058/Badsanierung_2_vorher_uvs1yj.jpg</image:loc>
+      <image:caption>Vorher – Badezimmer Rohbau</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507057/Badsanierung_3___vorher_t2p9lv.jpg</image:loc>
+      <image:caption>Vorher – Badezimmer Rohbau Schritt 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507057/WhatsApp_Bild_2024-12-27_um_23.13.11_c4958c88_hawv41.jpg</image:loc>
+      <image:caption>Vorher – Badezimmer Rohbau Detail</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507057/Badsanierung_vorher_i9wsa8.jpg</image:loc>
+      <image:caption>Vorher – Badezimmer Rohbau Gesamtansicht</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507056/Badsanierung_vorher_step_2__1_widqlh.jpg</image:loc>
+      <image:caption>Vorher – Badezimmer Rohbau Schritt 2 Detail</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507056/Badsanierung_3_nachher_tr7pqg.jpg</image:loc>
+      <image:caption>Nachher – Modernes, komplett saniertes Badezimmer Schritt 3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507056/Badsanierung_vorher_3_j5wtng.jpg</image:loc>
+      <image:caption>Vorher – Badezimmer Rohbau Schritt 3 Detail</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507056/Badsanierung_nachher_ieaizs.jpg</image:loc>
+      <image:caption>Nachher – Fertig saniertes Badezimmer</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://www.fr-innovative-haustechnik.de/datenschutz</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fr-innovative-haustechnik.de/impressum</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
