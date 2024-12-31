@@ -157,8 +157,8 @@ export const projects = [
     },
     images: [
       {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734691098/Dusche2-Vorher_ndczhr.jpg',
-        caption: 'Vor der Sanierung'
+        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735623387/Dusche_vorhher_bmaejx.jpg',
+        caption: 'Vorher während der Sanierung'
       },
       {
         url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734691094/Dusche2-Nachher_gbcxi3.jpg',
