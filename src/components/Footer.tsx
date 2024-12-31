@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* 1) Logo & Short Text */}
+          {/* Logo & Description */}
           <div>
             <img 
               src="https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734647725/transparent_Log_ggrs0m.png"
@@ -33,9 +34,19 @@ const Footer: React.FC = () => {
             <p className="text-gray-400">
               Ihr Partner für moderne Haustechnik und Sanitärlösungen.
             </p>
+            {/* Instagram Link */}
+            <a
+              href="https://www.instagram.com/fr_innovative_haustechnik"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center mt-4 text-gray-400 hover:text-white transition-colors duration-300"
+            >
+              <Instagram className="w-6 h-6 mr-2" />
+              <span>Folgen Sie uns auf Instagram</span>
+            </a>
           </div>
           
-          {/* 2) Leistungen */}
+          {/* Services */}
           <div>
             <h4 className="text-lg font-semibold mb-4">
               <button 
@@ -81,7 +92,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           
-          {/* 3) Kontakt */}
+          {/* Contact */}
           <div>
             <h4 className="text-lg font-semibold mb-4">
               <button 
@@ -113,11 +124,9 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           
-          {/* 4) Replaced Social Media with "Webseite designed von" */}
+          {/* Website Credits */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">
-              Webseite designed von
-            </h4>
+            <h4 className="text-lg font-semibold mb-4">Webseite designed von</h4>
             <div className="mb-6">
               <a 
                 href="https://www.abe-webstudio.de"
@@ -127,17 +136,16 @@ const Footer: React.FC = () => {
                 aria-label="Designed by ABE Webstudio"
               >
                 <picture>
-  <source 
-    media="(prefers-color-scheme: dark)" 
-    srcSet="https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735183471/ABE_Webstudio_Logo-Photoroom-White_apehbi.png"
-  />
-  <img
-    src="https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735183471/ABE_Webstudio_Logo-Photoroom_lpqekh.png"
-    alt="ABE Webstudio"
-    className="h-20 w-auto object-contain"  // Changed from h-10 to h-16
-  />
-</picture>
-
+                  <source 
+                    media="(prefers-color-scheme: dark)" 
+                    srcSet="https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735183471/ABE_Webstudio_Logo-Photoroom-White_apehbi.png"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735183471/ABE_Webstudio_Logo-Photoroom_lpqekh.png"
+                    alt="ABE Webstudio"
+                    className="h-20 w-auto object-contain"
+                  />
+                </picture>
                 <span className="text-xs text-gray-400 translate-y-[-0.5em]">™</span>
               </a>
             </div>
@@ -155,7 +163,7 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400">
-              &copy; {new Date().getFullYear()} FR innovative Haustechnik. Alle Rechte vorbehalten.
+              © {new Date().getFullYear()} FR innovative Haustechnik. Alle Rechte vorbehalten.
             </p>
           </div>
         </div>
