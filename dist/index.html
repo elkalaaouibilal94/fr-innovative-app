@@ -168,7 +168,7 @@
     </style>
 
     <!-- Defer non-critical CSS -->
-    <link rel="stylesheet" href="/assets/index.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/assets/index.css"/>
 
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
@@ -181,7 +181,9 @@
   </head>
   <body>
     <div class="loading"></div>
-    <div id="root"></div>
+    <div id="root">
+      <h1 aria-hidden="true">FR innovative Haustechnik – Heizungs- und Sanitärtechnik im Rhein-Main-Gebiet</h1>
+    </div>
     <script>
       // Add JS detection
       document.documentElement.classList.add('js');
