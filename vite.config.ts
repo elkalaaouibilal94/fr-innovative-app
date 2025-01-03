@@ -30,10 +30,14 @@ export default defineConfig({
           vendor: ['react', 'react-dom', 'react-router-dom'],
           ui: ['lucide-react', 'framer-motion', '@emailjs/browser']
         },
-        // Obfuscate chunk names
         chunkFileNames: 'assets/[hash].js',
         entryFileNames: 'assets/[hash].js',
-        assetFileNames: 'assets/[hash][extname]'
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'index.css') {
+            return 'assets/index.css';
+          }
+          return 'assets/[hash][extname]';
+        }
       }
     }
   },

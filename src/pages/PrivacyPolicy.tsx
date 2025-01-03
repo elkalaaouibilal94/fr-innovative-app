@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 const PrivacyPolicy: React.FC = () => {
   useEffect(() => {
@@ -8,6 +9,19 @@ const PrivacyPolicy: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pt-20">
+      {/* SEO Meta Tags */}
+      <Helmet>
+      <title>Datenschutz - FR Innovative Haustechnik</title>
+          <meta
+            name="description"
+            content="Datenschutz und DSGVO Rechtstexte"
+          />
+          <meta name="robots" content="index, follow" />
+          <link
+            rel="canonical"
+            href="https://www.fr-innovative-haustechnik.de/datenschutz"
+          />
+      </Helmet>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white rounded-lg shadow-sm p-8">
 
