@@ -138,15 +138,14 @@ const Footer: React.FC = () => {
                 <picture>
                   <source 
                     media="(prefers-color-scheme: dark)" 
-                    srcSet="https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735183471/ABE_Webstudio_Logo-Photoroom-White_apehbi.png"
+                    srcSet="https://res.cloudinary.com/dkrftmenj/image/upload/v1736376073/Logo_Discord_Quality_White_l85tuh.png"
                   />
                   <img
-                    src="https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735183471/ABE_Webstudio_Logo-Photoroom_lpqekh.png"
+                    src="https://res.cloudinary.com/dkrftmenj/image/upload/v1736375896/Logo_Discord_Quality_ottyrc.png"
                     alt="ABE Webstudio"
                     className="h-20 w-auto object-contain"
                   />
                 </picture>
-                <span className="text-xs text-gray-400 translate-y-[-0.5em]">™</span>
               </a>
             </div>
             <div className="space-y-2">
