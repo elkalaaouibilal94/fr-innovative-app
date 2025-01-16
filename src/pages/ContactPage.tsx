@@ -1,24 +1,10 @@
 import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import ContactForm from '../components/contact/ContactForm';
-import { Helmet } from 'react-helmet';
 
 const ContactPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 pt-20">
-      {/* SEO Meta Tags */}
-      <Helmet>
-        <title>Kontakt - FR Innovative Haustechnik</title>
-          <meta
-            name="description"
-            content="Kontaktieren Sie FR Innovative Haustechnik für Beratung zu Heizungs- und Sanitärlösungen in Rodgau und Umgebung."
-          />
-          <meta name="robots" content="index, follow" />
-          <link
-            rel="canonical"
-            href="https://www.fr-innovative-haustechnik.de/kontakt"
-          />
-      </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Kontaktieren Sie uns</h1>

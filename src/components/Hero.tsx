@@ -1,7 +1,7 @@
-import React from 'react';
-import SlideShow from './hero/SlideShow';
-import HeroContent from './hero/HeroContent';
-import { slides } from '../data/slides';
+import React from "react";
+import SlideShow from "./hero/SlideShow";
+import HeroContent from "./hero/HeroContent";
+import { slides } from "../data/slides";
 
 const Hero = () => {
   return (

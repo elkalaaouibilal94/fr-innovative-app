@@ -2,6 +2,7 @@ import React from 'react';
 import BeforeAfterImage from './BeforeAfterImage';
 import FeatureList from './FeatureList';
 import SectionTitle from '../common/SectionTitle';
+import { IMAGES } from '../../constants/images';
 
 const ShowerShowcase = () => {
   const showcases = [
@@ -14,8 +15,8 @@ const ShowerShowcase = () => {
         'Moderne Armaturen',
         'Rutschfeste Fliesen'
       ],
-      beforeImage: '/assets/Dusche1-Vorher.jpeg',
-      afterImage: '/assets/Dusche1-Nachher.jpeg'
+      beforeImage: IMAGES.PROJECTS.BATHROOM.BEFORE_AFTER.DUSCHE1.BEFORE,
+      afterImage: IMAGES.PROJECTS.BATHROOM.BEFORE_AFTER.DUSCHE1.AFTER
     },
     {
       title: 'Duschsanierung Projekt 2',
@@ -26,8 +27,8 @@ const ShowerShowcase = () => {
         'Thermostatarmatur',
         'Optimierte Raumnutzung'
       ],
-      beforeImage: '/assets/Dusche2-Vorher.jpeg',
-      afterImage: '/assets/Dusche2-Nachher.jpeg'
+      beforeImage: IMAGES.PROJECTS.BATHROOM.BEFORE_AFTER.DUSCHE2.BEFORE,
+      afterImage: IMAGES.PROJECTS.BATHROOM.BEFORE_AFTER.DUSCHE2.AFTER
     }
   ];
 

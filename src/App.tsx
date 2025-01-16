@@ -1,9 +1,9 @@
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import { routes } from './routes';
-import { ZoomProvider } from './contexts/ZoomContext';
-import LoadingScreen from './components/loading/LoadingScreen';
+import React, { Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import { routes } from "./routes";
+import { ZoomProvider } from "./contexts/ZoomContext";
+import LoadingScreen from "./components/loading/LoadingScreen";
 
 function App() {
   return (

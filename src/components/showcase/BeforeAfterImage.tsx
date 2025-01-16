@@ -1,4 +1,5 @@
 import React from 'react';
+import { getImageUrl } from '../../utils/imageUtils';
 
 interface BeforeAfterImageProps {
   beforeImage: string;
@@ -11,15 +12,13 @@ const BeforeAfterImage: React.FC<BeforeAfterImageProps> = ({ beforeImage, afterI
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
       <div className="relative overflow-hidden rounded-lg">
         <div className="relative w-full" style={{ paddingBottom: '75%' }}>
-          {/* Blurred background */}
           <img
-            src={beforeImage}
+            src={getImageUrl(beforeImage)}
             alt=""
             className="absolute inset-0 w-full h-full object-cover blur-md scale-105"
           />
-          {/* Clear main image */}
           <img
-            src={beforeImage}
+            src={getImageUrl(beforeImage)}
             alt={`${alt} - Vorher`}
             className="absolute inset-0 w-full h-full object-contain z-10"
           />
@@ -30,15 +29,13 @@ const BeforeAfterImage: React.FC<BeforeAfterImageProps> = ({ beforeImage, afterI
       </div>
       <div className="relative overflow-hidden rounded-lg">
         <div className="relative w-full" style={{ paddingBottom: '75%' }}>
-          {/* Blurred background */}
           <img
-            src={afterImage}
+            src={getImageUrl(afterImage)}
             alt=""
             className="absolute inset-0 w-full h-full object-cover blur-md scale-105"
           />
-          {/* Clear main image */}
           <img
-            src={afterImage}
+            src={getImageUrl(afterImage)}
             alt={`${alt} - Nachher`}
             className="absolute inset-0 w-full h-full object-contain z-10"
           />

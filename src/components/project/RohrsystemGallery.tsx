@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { ProjectImage } from '../../types/project';
 import ImageViewer from '../common/ImageViewer';
+import { getImageUrl } from '../../utils/imageUtils';
 
 interface RohrsystemGalleryProps {
   images: ProjectImage[];
@@ -43,23 +44,20 @@ const RohrsystemGallery: React.FC<RohrsystemGalleryProps> = ({ images }) => {
 
   return (
     <div className="relative">
-      {/* Main Image Container */}
       <div className="relative aspect-[4/3] overflow-hidden rounded-lg group">
         <div className="absolute inset-0">
-          {/* Blurred background */}
           <img
-            src={images[currentIndex].url}
+            src={getImageUrl(images[currentIndex].url)}
             alt=""
             className="w-full h-full object-cover blur-md scale-105 transform opacity-50"
           />
         </div>
-        {/* Main image */}
         <div 
           className="relative z-10 h-full cursor-zoom-in"
           onClick={() => handleImageClick(currentIndex)}
         >
           <img
-            src={images[currentIndex].url}
+            src={getImageUrl(images[currentIndex].url)}
             alt={images[currentIndex].caption}
             className="w-full h-full object-cover transition-transform duration-200 
                      group-hover:scale-[1.02]"
@@ -67,7 +65,6 @@ const RohrsystemGallery: React.FC<RohrsystemGalleryProps> = ({ images }) => {
         </div>
       </div>
 
-      {/* Navigation Buttons */}
       <button
         onClick={(e) => { e.stopPropagation(); prevSlide(); }}
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full
@@ -88,7 +85,6 @@ const RohrsystemGallery: React.FC<RohrsystemGalleryProps> = ({ images }) => {
         <ChevronRight size={24} />
       </button>
 
-      {/* Thumbnail Navigation */}
       <div className="flex justify-center gap-2 mt-4">
         {images.map((_, index) => (
           <button
@@ -101,11 +97,10 @@ const RohrsystemGallery: React.FC<RohrsystemGalleryProps> = ({ images }) => {
         ))}
       </div>
 
-      {/* Image Viewer */}
       <ImageViewer
         isOpen={selectedImage !== null}
         onClose={() => setSelectedImage(null)}
-        src={selectedImage?.url || ''}
+        src={selectedImage ? getImageUrl(selectedImage.url) : ''}
         alt={selectedImage?.caption || ''}
         caption={selectedImage?.caption}
         onNext={handleNext}

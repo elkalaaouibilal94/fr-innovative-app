@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import { ArrowLeft } from 'lucide-react';
 import { projects } from '../data/projects';
+import ProjectGallery from '../components/project/ProjectGallery';
 import ProjectDetails from '../components/project/ProjectDetails';
 import ProjectSidebar from '../components/project/ProjectSidebar';
 
@@ -29,11 +29,6 @@ const ProjectPage: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <Helmet>
-            <title>Projekt nicht gefunden - FR Innovative Haustechnik</title>
-            <meta name="description" content="Das gewünschte Projekt wurde nicht gefunden." />
-            <meta name="robots" content="noindex, follow" />
-          </Helmet>
           <h1 className="text-2xl font-bold mb-4">Projekt nicht gefunden</h1>
           <button
             onClick={handleBack}
@@ -48,25 +43,14 @@ const ProjectPage: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen pt-16">
-      {/* Dynamic Metadata */}
-      <Helmet>
-        <title>{project.title} - FR Innovative Haustechnik</title>
-        <meta name="description" content={project.description} />
-        <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href={`https://www.fr-innovative-haustechnik.de/projekte/${projectId}`}
-        />
-      </Helmet>
-
       {/* Header */}
-      <div
+      <div 
         className="relative bg-gray-900 text-white py-20"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${project.bannerImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
+          backgroundAttachment: 'fixed'
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

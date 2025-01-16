@@ -1,19 +1,25 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     emptyOutDir: true,
-    sourcemap: false, // Disable source maps in production
-    minify: 'terser',
+    sourcemap: false,
+    minify: "terser",
+    assetsInlineLimit: 0, // Don't inline any assets
     terserOptions: {
       compress: {
-        drop_console: true, // Remove console.log etc
+        drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        pure_funcs: [
+          "console.log",
+          "console.info",
+          "console.debug",
+          "console.warn",
+        ],
         passes: 2,
       },
       mangle: {
@@ -21,29 +27,37 @@ export default defineConfig({
         safari10: true,
       },
       format: {
-        comments: false, // Remove comments
-      }
+        comments: false,
+      },
     },
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['lucide-react', 'framer-motion', '@emailjs/browser']
+          vendor: ["react", "react-dom", "react-router-dom"],
+          ui: ["lucide-react", "framer-motion", "@emailjs/browser"],
         },
-        chunkFileNames: 'assets/[hash].js',
-        entryFileNames: 'assets/[hash].js',
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'index.css') {
-            return 'assets/index.css';
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js",
+        assetFileNames: ({ name }) => {
+          if (/\.(gif|jpe?g|png|svg)$/i.test(name ?? "")) {
+            return "assets/[name]-[hash][extname]";
           }
-          return 'assets/[hash][extname]';
-        }
-      }
-    }
+          return "assets/[name]-[hash][extname]";
+        },
+      },
+    },
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
-    }
-  }
+      "@": path.resolve(__dirname, "./src"),
+      "@assets": path.resolve(__dirname, "./src/assets"),
+    },
+  },
+  publicDir: "public",
+  base: "/",
+  server: {
+    watch: {
+      usePolling: true,
+    },
+  },
 });

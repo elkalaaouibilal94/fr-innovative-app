@@ -1,8 +1,10 @@
+import { IMAGES } from '../constants/images';
+
 export const projects = [
   {
     id: 'komplettbad-sanierung',
     title: 'Komplette Badsanierung',
-    bannerImage: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734642983/IMG_1535_wk2bnw.jpg',
+    bannerImage: IMAGES.PROJECTS.BATHROOM.COMPLETE.GALLERY[0],
     client: 'Familie B.',
     industry: 'Sanitär',
     overview: 'Vollständige Renovierung eines Badezimmers mit modernem Design und hochwertiger Ausstattung.',
@@ -39,34 +41,16 @@ export const projects = [
       start: '2024-02-15',
       end: '2024-03-10'
     },
-    images: [
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734642983/IMG_1535_wk2bnw.jpg',
-        caption: 'Neue Badezimmergestaltung'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734642981/IMG_6253_saqgas.jpg',
-        caption: 'Moderne Sanitäranlagen'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734642985/IMG_4319_oxwtdt.jpg',
-        caption: 'Duschbereich'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734642978/IMG_0388_ohpixu.jpg',
-        caption: 'Waschtischbereich'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734642979/IMG_5598_qponu8.jpg',
-        caption: 'Gesamtansicht'
-      }
-    ],
+    images: IMAGES.PROJECTS.BATHROOM.COMPLETE.GALLERY.map((url, index) => ({
+      url,
+      caption: `Badezimmer Ansicht ${index + 1}`
+    })),
     relatedProjects: ['duschsanierung-1', 'duschsanierung-2']
   },
   {
     id: 'duschsanierung-1',
     title: 'Duschsanierung Projekt 1',
-    bannerImage: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734642983/IMG_5540_uutkc9.jpg',
+    bannerImage: IMAGES.PROJECTS.BATHROOM.BEFORE_AFTER.DUSCHE1.AFTER,
     client: 'Familie S.',
     industry: 'Sanitär',
     overview: 'Komplette Modernisierung einer veralteten Dusche mit Fokus auf Barrierefreiheit und modernem Design.',
@@ -105,11 +89,11 @@ export const projects = [
     },
     images: [
       {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734691099/Dusche1-Vorher_gvza6t.jpg',
+        url: IMAGES.PROJECTS.BATHROOM.BEFORE_AFTER.DUSCHE1.BEFORE,
         caption: 'Ursprünglicher Zustand'
       },
       {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734691097/Dusche1-Nachher_nohr6u.jpg',
+        url: IMAGES.PROJECTS.BATHROOM.BEFORE_AFTER.DUSCHE1.AFTER,
         caption: 'Nach der Sanierung'
       }
     ],
@@ -118,7 +102,7 @@ export const projects = [
   {
     id: 'duschsanierung-2',
     title: 'Duschsanierung Projekt 2',
-    bannerImage: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734642980/IMG_3422_wugvac.jpg',
+    bannerImage: IMAGES.PROJECTS.BATHROOM.BEFORE_AFTER.DUSCHE2.AFTER,
     client: 'Familie W.',
     industry: 'Sanitär',
     overview: 'Umfassende Renovierung mit Schwerpunkt auf Funktionalität und zeitgemäßer Ästhetik.',
@@ -157,11 +141,11 @@ export const projects = [
     },
     images: [
       {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735623387/Dusche_vorhher_bmaejx.jpg',
-        caption: 'Vorher während der Sanierung'
+        url: IMAGES.PROJECTS.BATHROOM.BEFORE_AFTER.DUSCHE2.BEFORE,
+        caption: 'Vor der Sanierung'
       },
       {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734691094/Dusche2-Nachher_gbcxi3.jpg',
+        url: IMAGES.PROJECTS.BATHROOM.BEFORE_AFTER.DUSCHE2.AFTER,
         caption: 'Nach der Modernisierung'
       }
     ],
@@ -170,7 +154,7 @@ export const projects = [
   {
     id: 'rohrsystem-installation',
     title: 'Installation Rohrsysteme',
-    bannerImage: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734691349/Rohrsystem1_4_n9edfo.jpg',
+    bannerImage: IMAGES.PROJECTS.PIPES.INSTALLATION[0],
     client: 'Mehrfamilienhaus Rodgau',
     industry: 'Sanitär',
     overview: 'Installation eines kompletten Rohrsystems für ein Mehrfamilienhaus, einschließlich Trinkwasser- und Abwasserleitungen.',
@@ -207,30 +191,16 @@ export const projects = [
       start: '2024-01-20',
       end: '2024-02-15'
     },
-    images: [
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734691352/Rohrsystem1_2_sijd7i.jpg',
-        caption: 'Hauptverteilung'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734691351/Rohrsystem1_3_g2upri.jpg',
-        caption: 'Leitungsführung'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734691349/Rohrsystem1_4_n9edfo.jpg',
-        caption: 'Isolierte Rohre'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734691348/Rohrsystem1_1_cha7d7.jpg',
-        caption: 'Fertige Installation'
-      }
-    ],
+    images: IMAGES.PROJECTS.PIPES.INSTALLATION.map((url, index) => ({
+      url,
+      caption: `Installation Phase ${index + 1}`
+    })),
     relatedProjects: ['heizungsinstallation', 'komplettbad-sanierung']
   },
   {
     id: 'heizungsinstallation',
     title: 'Installation von Heizsystemen',
-    bannerImage: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734690396/Heizsystem1_1_ikbhba.jpg',
+    bannerImage: IMAGES.PROJECTS.HEATING.SYSTEM[0],
     client: 'Mehrfamilienhaus',
     industry: 'Heizungstechnik',
     overview: 'Komplette Installation eines modernen Heizsystems für ein Mehrfamilienhaus, mit Fokus auf Energieeffizienz und Nachhaltigkeit.',
@@ -268,158 +238,71 @@ export const projects = [
       end: '2024-02-10'
     },
     images: [
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734690396/Heizsystem1_1_ikbhba.jpg',
-        caption: 'Moderne Fußbodenheizung'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507058/Bodenheizung_wlkps2.jpg',
-        caption: 'Moderne Fußbodenheizung'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507058/Bodenheizung2_rygwul.jpg',
-        caption: 'Moderne Fußbodenheizung'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507057/Rohrverlegung_2_gxgtaq.jpg',
-        caption: 'Verlegung der Heizungsrohre'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507057/Rohrverlegung_2_gxgtaq.jpg',
-        caption: 'Verlegung der Heizungsrohre'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507057/Heizungsverlegung2_gsbfdl.jpg',
-        caption: 'Anschluß an die Heizung'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507056/Heizungsverlegung_gdur5z.jpg',
-        caption: 'Anschluß an die Heizung'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734690401/Heizsystem1_2_aicebq.jpg',
-        caption: 'Steuerungseinheit'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734690401/Heizsystem1_3_dbhrxl.jpg',
-        caption: 'Rohrleitungssystem'
-      },
-      {
-        url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1734690401/Heizsystem1_4_vm5rkv.jpg',
-        caption: 'Fertige Installation'
-      }
+      ...IMAGES.PROJECTS.HEATING.SYSTEM.map((url, index) => ({
+        url,
+        caption: `Heizungssystem Installation Phase ${index + 1}`
+      })),
+      ...IMAGES.PROJECTS.HEATING.FLOOR_HEATING.map((url, index) => ({
+        url,
+        caption: `Fußbodenheizung Installation Phase ${index + 1}`
+      }))
     ],
     relatedProjects: ['komplettbad-sanierung', 'rohrsystem-installation']
   },
   {
     id: 'badsanierungen-vorher-und-nachher',
     title: 'Badsanierung Vorher & Nachher',
-    bannerImage: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507056/Badsanierung_nachher_ieaizs.jpg',
+    bannerImage: IMAGES.PROJECTS.BATHROOM.SANIERUNG.NACHHER[0],
     client: 'Mehrfamilienhaus',
     industry: 'Badsanierung',
     overview: 'Komplette Badsanierung eines Mehrfamilienhauses von der Rohbauphase bis zur fertigen Installation. Fokus auf Funktionalität und modernes Design.',
     objectives: [
-        'Komplette Badsanierung',
-        'Optimierung der Raumnutzung',
-        'Modernes Design',
-        'Energieeffizienz',
-        'Erhöhung des Wohnkomforts'
+      'Komplette Badsanierung',
+      'Optimierung der Raumnutzung',
+      'Modernes Design',
+      'Energieeffizienz',
+      'Erhöhung des Wohnkomforts'
     ],
     solutions: [
-        'Rohbau und Strukturarbeiten',
-        'Installation moderner Sanitäranlagen',
-        'Elektrische und Beleuchtungssysteme',
-        'Fliesenarbeiten',
-        'Sanitäre Ausstattung'
+      'Rohbau und Strukturarbeiten',
+      'Installation moderner Sanitäranlagen',
+      'Elektrische und Beleuchtungssysteme',
+      'Fliesenarbeiten',
+      'Sanitäre Ausstattung'
     ],
     results: [
-        'Vollständige Transformation',
-        'Erhöhte Energieeffizienz',
-        'Verbesserte Ästhetik',
-        'Optimierte Raumnutzung',
-        'Zufriedene Kunden'
+      'Vollständige Transformation',
+      'Erhöhte Energieeffizienz',
+      'Verbesserte Ästhetik',
+      'Optimierte Raumnutzung',
+      'Zufriedene Kunden'
     ],
     testimonial: {
-        content: 'Die Badsanierung hat unsere Badezimmer komplett verwandelt. Die Qualität und der neue Wohnkomfort sind beeindruckend.',
-        author: 'Hausverwaltung S.',
-        role: 'Auftraggeber'
+      content: 'Die Badsanierung hat unsere Badezimmer komplett verwandelt. Die Qualität und der neue Wohnkomfort sind beeindruckend.',
+      author: 'Hausverwaltung S.',
+      role: 'Auftraggeber'
     },
     technologies: [
-        'Hochwertige Sanitäranlagen',
-        'Energieeffiziente Beleuchtung',
-        'Moderne Fliesentechniken',
-        'Smart Home Integration',
-        'Nachhaltige Materialien'
+      'Hochwertige Sanitäranlagen',
+      'Energieeffiziente Beleuchtung',
+      'Moderne Fliesentechniken',
+      'Smart Home Integration',
+      'Nachhaltige Materialien'
     ],
     timeline: {
-        start: '2023-03-01',
-        end: '2023-08-31'
+      start: '2023-03-01',
+      end: '2023-08-31'
     },
     images: [
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507057/Badsanierung_3___vorher_t2p9lv.jpg',
-            caption: 'Vorher – Badezimmer Rohbau'
-        },
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507056/Badsanierung_3_nachher_tr7pqg.jpg',
-            caption: 'Nachher – Modernes, komplett saniertes Badezimmer'
-        },
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507057/Badsanierung_vorher_i9wsa8.jpg',
-            caption: 'Vorher – Badezimmer Rohbau Gesamtansicht'
-        },
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507058/Badsanierung_2_vorher_uvs1yj.jpg',
-            caption: 'Vorher – Badezimmer Rohbau'
-        },
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507056/Badsanierung_vorher_3_j5wtng.jpg',
-            caption: 'Vorher – Badezimmer Rohbau Detail'
-        },
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507057/Badsanierung_vorher_step_2___2_nrqa7d.jpg',
-            caption: 'Vorher – Rohbau des Badezimmers Schritt 2'
-        },
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507056/Badsanierung_vorher_step_2__1_widqlh.jpg',
-            caption: 'Vorher – Badezimmer Rohbau Schritt 2 Detail'
-        },    
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507057/WhatsApp_Bild_2024-12-27_um_23.13.11_c4958c88_hawv41.jpg',
-            caption: 'Fertig Saniertes Badezimmer'
-        },     
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735507056/Badsanierung_nachher_ieaizs.jpg',
-            caption: 'Fertig Saniertes Badezimmer'
-        },
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735591633/Badvorher4_bkfpei.jpg',
-            caption: 'Vorher - während der Sanierung'
-        },
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735591634/Badvorher3_yztsps.jpg',
-            caption: 'Vorher - während der Sanierung'
-        },
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735591634/Bavorher2_eu1ktd.jpg',
-            caption: 'Vorher - während der Sanierung'
-        },
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735591633/Badnachher1_chdy8o.jpg',
-            caption: 'Nachher - Nach der Sanierung'
-        },
-        {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735591633/Badnachher3_igu1od.jpg',
-            caption: 'Nachher - Nach der Sanierung'
-        },
-      {
-            url: 'https://res.cloudinary.com/dyzvzlq7u/image/upload/v1735591633/Badnachher2_kw1p7v.jpg',
-            caption: 'Nachher - Nach der Sanierung'
-        },
+      ...IMAGES.PROJECTS.BATHROOM.SANIERUNG.VORHER.map((url, index) => ({
+        url,
+        caption: `Vorher – Badezimmer Rohbau Phase ${index + 1}`
+      })),
+      ...IMAGES.PROJECTS.BATHROOM.SANIERUNG.NACHHER.map((url, index) => ({
+        url,
+        caption: `Nachher – Fertig saniertes Badezimmer ${index + 1}`
+      }))
     ],
-    relatedProjects: [
-        'komplettbad-sanierung',
-        'rohrsystem-installation'
-    ]
-}
+    relatedProjects: ['komplettbad-sanierung', 'rohrsystem-installation']
+  }
 ];

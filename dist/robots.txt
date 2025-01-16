@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Allow: /assets/
 Sitemap: https://www.fr-innovative-haustechnik.de/sitemap.xml

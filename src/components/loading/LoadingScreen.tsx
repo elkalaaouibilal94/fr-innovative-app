@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Wrench } from 'lucide-react';
-import { preloadAssets } from '../../utils/preloadAssets';
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Wrench } from "lucide-react";
+import { preloadAssets } from "../../utils/preloadAssets";
 
 export default function LoadingScreen() {
   const [progress, setProgress] = useState(0);
@@ -12,7 +12,7 @@ export default function LoadingScreen() {
         await preloadAssets();
         setProgress(100);
       } catch (error) {
-        console.error('Failed to preload some assets:', error);
+        console.error("Failed to preload some assets:", error);
         setProgress(100); // Continue anyway
       }
     };
@@ -22,7 +22,7 @@ export default function LoadingScreen() {
 
     // Update progress more frequently
     const progressInterval = setInterval(() => {
-      setProgress(prev => {
+      setProgress((prev) => {
         if (prev >= 90) return prev; // Don't update if we're waiting for final load
         return prev + 2; // Faster progress
       });
@@ -46,7 +46,7 @@ export default function LoadingScreen() {
       <motion.div
         animate={{
           rotate: 360,
-          transition: { duration: 1, repeat: Infinity, ease: "linear" }
+          transition: { duration: 1, repeat: Infinity, ease: "linear" },
         }}
         className="mb-8"
       >
@@ -61,7 +61,7 @@ export default function LoadingScreen() {
           transition={{ duration: 0.1 }}
         />
       </div>
-      
+
       <p className="mt-4 text-gray-600">Laden...</p>
     </motion.div>
   );

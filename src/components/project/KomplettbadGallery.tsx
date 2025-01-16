@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { ProjectImage } from '../../types/project';
 import ImageViewer from '../common/ImageViewer';
+import { getImageUrl } from '../../utils/imageUtils';
 
 interface KomplettbadGalleryProps {
   images: ProjectImage[];
@@ -43,11 +44,10 @@ const KomplettbadGallery: React.FC<KomplettbadGalleryProps> = ({ images }) => {
 
   return (
     <div className="relative">
-      {/* Main Image */}
       <div className="relative aspect-[4/3] overflow-hidden rounded-lg group">
         <div className="absolute inset-0">
           <img
-            src={images[currentIndex].url}
+            src={getImageUrl(images[currentIndex].url)}
             alt=""
             className="w-full h-full object-cover blur-md scale-105 transform opacity-50"
           />
@@ -57,7 +57,7 @@ const KomplettbadGallery: React.FC<KomplettbadGalleryProps> = ({ images }) => {
           onClick={() => handleImageClick(currentIndex)}
         >
           <img
-            src={images[currentIndex].url}
+            src={getImageUrl(images[currentIndex].url)}
             alt={images[currentIndex].caption}
             className="w-full h-full object-cover transition-transform duration-200 
                      group-hover:scale-[1.02]"
@@ -65,7 +65,6 @@ const KomplettbadGallery: React.FC<KomplettbadGalleryProps> = ({ images }) => {
         </div>
       </div>
 
-      {/* Navigation Buttons */}
       <button
         onClick={(e) => { e.stopPropagation(); prevSlide(); }}
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full
@@ -86,7 +85,6 @@ const KomplettbadGallery: React.FC<KomplettbadGalleryProps> = ({ images }) => {
         <ChevronRight size={24} />
       </button>
 
-      {/* Thumbnails */}
       <div className="flex gap-2 mt-4 overflow-x-auto pb-2">
         {images.map((image, index) => (
           <button
@@ -94,13 +92,11 @@ const KomplettbadGallery: React.FC<KomplettbadGalleryProps> = ({ images }) => {
             onClick={() => setCurrentIndex(index)}
             className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden 
                      transition-all duration-200 ${
-                       index === currentIndex 
-                         ? 'ring-2 ring-blue-600' 
-                         : 'opacity-70 hover:opacity-100'
+                       index === currentIndex ? 'ring-2 ring-blue-600' : 'opacity-70 hover:opacity-100'
                      }`}
           >
             <img
-              src={image.url}
+              src={getImageUrl(image.url)}
               alt={image.caption}
               className="w-full h-full object-cover"
             />
@@ -108,11 +104,10 @@ const KomplettbadGallery: React.FC<KomplettbadGalleryProps> = ({ images }) => {
         ))}
       </div>
 
-      {/* Image Viewer */}
       <ImageViewer
         isOpen={selectedImage !== null}
         onClose={() => setSelectedImage(null)}
-        src={selectedImage?.url || ''}
+        src={selectedImage ? getImageUrl(selectedImage.url) : ''}
         alt={selectedImage?.caption || ''}
         caption={selectedImage?.caption}
         onNext={handleNext}

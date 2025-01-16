@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ImageViewer from '../common/ImageViewer';
+import { getImageUrl } from '../../utils/imageUtils';
 import type { ProjectImage } from '../../types/project';
 
 interface ProjectGalleryProps {
@@ -16,23 +17,20 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ images }) => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Before Image */}
         <div className="relative aspect-[4/3] overflow-hidden rounded-lg group">
           <div className="absolute inset-0">
-            {/* Blurred background */}
             <img
-              src={beforeImage.url}
+              src={getImageUrl(beforeImage.url)}
               alt=""
               className="w-full h-full object-cover blur-md scale-105 transform"
             />
           </div>
-          {/* Main image */}
           <div 
             className="relative z-10 h-full cursor-zoom-in"
             onClick={() => setSelectedImage(beforeImage)}
           >
             <img
-              src={beforeImage.url}
+              src={getImageUrl(beforeImage.url)}
               alt={beforeImage.caption}
               className="w-full h-full object-cover transition-transform duration-200 
                        group-hover:scale-[1.02]"
@@ -44,23 +42,20 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ images }) => {
           </div>
         </div>
 
-        {/* After Image */}
         <div className="relative aspect-[4/3] overflow-hidden rounded-lg group">
           <div className="absolute inset-0">
-            {/* Blurred background */}
             <img
-              src={afterImage.url}
+              src={getImageUrl(afterImage.url)}
               alt=""
               className="w-full h-full object-cover blur-md scale-105 transform"
             />
           </div>
-          {/* Main image */}
           <div 
             className="relative z-10 h-full cursor-zoom-in"
             onClick={() => setSelectedImage(afterImage)}
           >
             <img
-              src={afterImage.url}
+              src={getImageUrl(afterImage.url)}
               alt={afterImage.caption}
               className="w-full h-full object-cover transition-transform duration-200 
                        group-hover:scale-[1.02]"
@@ -73,11 +68,10 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ images }) => {
         </div>
       </div>
 
-      {/* Image Viewer */}
       <ImageViewer
         isOpen={selectedImage !== null}
         onClose={() => setSelectedImage(null)}
-        src={selectedImage?.url || ''}
+        src={selectedImage ? getImageUrl(selectedImage.url) : ''}
         alt={selectedImage?.caption || ''}
         caption={selectedImage?.caption}
       />

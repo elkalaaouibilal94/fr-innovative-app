@@ -1,4 +1,5 @@
 import React from 'react';
+import { getImageUrl } from '../../utils/imageUtils';
 
 interface ReferenceCardProps {
   title: string;
@@ -17,7 +18,7 @@ const ReferenceCard: React.FC<ReferenceCardProps> = ({
     <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
       <div className="relative h-64">
         <img
-          src={imageUrl}
+          src={getImageUrl(imageUrl)}
           alt={title}
           className="w-full h-full object-cover"
         />

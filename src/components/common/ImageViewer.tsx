@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useZoom } from '../../contexts/ZoomContext';
+import { getImageUrl } from '../../utils/imageUtils';
 
 interface ImageViewerProps {
   isOpen: boolean;
@@ -72,7 +73,6 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
       className="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-sm"
       onClick={onClose}
     >
-      {/* Close button */}
       <div className="absolute top-4 right-4 z-[10000]">
         <button
           onClick={(e) => { e.stopPropagation(); onClose(); }}
@@ -84,7 +84,6 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
         </button>
       </div>
 
-      {/* Navigation arrows */}
       {hasPrevious && (
         <button
           onClick={(e) => handleNavigation(e, 'previous')}
@@ -109,7 +108,6 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
         </button>
       )}
 
-      {/* Image container */}
       <div 
         className="absolute inset-0 flex items-center justify-center p-4"
         onClick={(e) => e.stopPropagation()}
@@ -120,7 +118,7 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
           </div>
         )}
         <img
-          src={src}
+          src={getImageUrl(src)}
           alt={alt}
           className={`max-w-[95vw] max-h-[90vh] object-contain transition-opacity duration-300
                     ${isLoading ? 'opacity-0' : 'opacity-100'}`}
@@ -128,14 +126,12 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
         />
       </div>
 
-      {/* Caption */}
       {caption && (
         <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/50 text-white text-center">
           <p>{caption}</p>
         </div>
       )}
 
-      {/* Keyboard navigation hint */}
       <div className="absolute bottom-4 left-4 text-white/50 text-sm">
         Use arrow keys to navigate • ESC to close
       </div>
