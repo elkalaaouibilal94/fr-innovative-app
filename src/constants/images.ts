@@ -81,14 +81,6 @@ export const IMAGES = {
       ],
     },
   },
-
-  // Credits
-  CREDITS: {
-    ABE_WEBSTUDIO: {
-      LIGHT: "images/credits/abe-webstudio-light.png",
-      DARK: "images/credits/abe-webstudio-dark.png",
-    },
-  },
 } as const;
 
 // Validate all image paths exist at build time
