@@ -79,20 +79,6 @@ const Imprint = () => {
               diese Inhalte umgehend entfernen.
             </p>
 
-            {/* Web Design Responsibility */}
-            <h2 className="text-xl font-semibold">
-              Haftung für Webdesign und externe Dienstleister
-            </h2>
-            <p>
-              Diese Website wurde durch die <strong>ABE Webstudio GbR</strong>{" "}
-              gestaltet und programmiert. Die ABE Webstudio GbR übernimmt jedoch
-              keinerlei Haftung für die Inhalte, die Rechtstexte (z. B.
-              Impressum, Datenschutz) oder sonstige rechtliche Angaben auf
-              dieser Website. Sämtliche Inhalte, Rechtstexte, Informationen und
-              Pflichten aus dem Betrieb dieser Webseite liegen in der alleinigen
-              Verantwortlichkeit von <strong>FR Innovative Haustechnik</strong>.
-            </p>
-
             {/* Privacy */}
             <h2 className="text-xl font-semibold">Datenschutz</h2>
             <p>

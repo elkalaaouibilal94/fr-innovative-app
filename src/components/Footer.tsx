@@ -124,35 +124,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Website Credits */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">
-              Webseite designed von
-            </h4>
-            <div className="mb-6">
-              <a
-                href="https://www.abe-webstudio.de"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 group transition-transform duration-300 hover:scale-105"
-                aria-label="Designed by ABE Webstudio"
-              >
-                <picture>
-                  <source
-                    media="(prefers-color-scheme: dark)"
-                    srcSet={getImageUrl(IMAGES.CREDITS.ABE_WEBSTUDIO.DARK)}
-                  />
-                  <img
-                    src={getImageUrl(IMAGES.CREDITS.ABE_WEBSTUDIO.LIGHT)}
-                    alt="ABE Webstudio"
-                    className="h-20 w-auto object-contain"
-                  />
-                </picture>
-                <span className="text-xs text-gray-400 translate-y-[-0.5em]">
-                  ™
-                </span>
-              </a>
-            </div>
             <div className="space-y-2">
               <Link
                 to="/datenschutz"
